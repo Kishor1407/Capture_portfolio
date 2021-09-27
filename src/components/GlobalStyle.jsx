@@ -23,7 +23,6 @@ button{
     color: white;
     transition: all 0.5s ease;
     font-family: 'Inter', sans-serif;
-    ${'' /* font-family: 'Lobster', cursive; */}
     &:hover{
         background-color: #23d997 ;
         color: white;
