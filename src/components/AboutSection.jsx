@@ -3,6 +3,7 @@
  import { About, Description, Image, Hide } from "../styles";
  //Framer motion
  import { motion } from "framer-motion";
+ import { titleAnim , fade, photoAnim } from "../animation";
 
  const AboutSection = () => {
 
@@ -21,21 +22,21 @@
              {/* <motion.div variants={container}  initial="hidden" animate="show" className="title"> */}
              <motion.div className="title">
                  <Hide>
-                     <motion.h2>We work to make </motion.h2>
+                     <motion.h2 variants={titleAnim} >We work to make </motion.h2>
                  </Hide>
                  <Hide>
-                     <motion.h2>your <span>dream</span> come </motion.h2>
+                     <motion.h2 variants={titleAnim}>your <span>dream</span> come </motion.h2>
                  </Hide>
                  <Hide>
-                     <motion.h2 >true. </motion.h2>
+                     <motion.h2 variants={titleAnim} >true. </motion.h2>
                  </Hide>
              </motion.div>
-             <p>Contact us for any Photography and Videography ideas that you have.
-              We have professional skills.</p>
-              <button>Contact Us</button>
+             <motion.p variants={fade}>Contact us for any Photography and Videography ideas that you have.
+              We have professional skills.</motion.p>
+              <motion.button variants={fade}>Contact Us</motion.button>
            </Description>
-           <Image>
-               <img src={home1}  alt="Guy with a camera" />
+           <Image >
+               <motion.img variants={photoAnim} src={home1}  alt="Guy with a camera" />
            </Image>
        </About>
      )
