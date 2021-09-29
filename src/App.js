@@ -8,7 +8,6 @@ import MovieDetail from "./pages/MovieDetail";
 //Router
 import {Switch, Route, useLocation} from "react-router-dom"
 import { AnimatePresence } from "framer-motion";
-import ScrollTop from "./components/ScrollTop";
 
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
 
   return (
     <div className="App">
-    <ScrollTop />
      <Nav />
       <GlobalStyle />
         <AnimatePresence exitBeforeEnter>
