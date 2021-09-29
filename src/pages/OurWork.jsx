@@ -8,6 +8,8 @@ import goodtimes from "../img/goodtimes-small.png";
 import { motion } from "framer-motion"; 
 import {pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from "../animation";
 import {useScroll} from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
+
 
 const OurWork = () => {
   const [element, controls] = useScroll();
@@ -15,6 +17,7 @@ const OurWork = () => {
   
     return (
        <Work style={{background: "#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+        <ScrollTop />
         <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
