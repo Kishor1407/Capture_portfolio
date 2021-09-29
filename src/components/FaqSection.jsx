@@ -3,12 +3,14 @@ import styled from "styled-components";
 import {About} from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
+import { useScroll } from "./useScroll";
+import {scrollReveal} from "../animation"
 
 const FaqSection = () => {
- 
+ const [element, controls] = useScroll();
     return (
-      <Faq>
-          <h2>Any Question  <span>FAQ</span> </h2>
+      <Faq variants={scrollReveal} ref={element} animate={controls} initial="hidden">
+          <h2>Any Question <span> FAQ </span></h2>
           <AnimateSharedLayout>
           <Toggle title="How do i start?">
               <div className="answer">
@@ -49,8 +51,9 @@ const Faq = styled(About)`
        display: block;
    }
    h2{
-       padding-bottom: 2rem;
+       padding-bottom: 1.5rem;
        font-weight: lighter;
+       font-size: 3.5rem;
    }
    .faq-line{
        background: #cccccc;
@@ -59,15 +62,17 @@ const Faq = styled(About)`
        width: 100%;
    }
    .question{
-       padding: 3rem 0rem;
+       padding: 0.5rem 0rem;
        cursor: pointer;  
    }
    .answer{
-       padding: 2rem 0rem;
+       padding: 0.5rem 0rem;
        p{
-           padding: 1rem 0rem;
+           padding: 0.5rem 0rem;
+           font-size: 1rem;
        }
    }
 `;
+
 
 export default FaqSection;

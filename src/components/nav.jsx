@@ -36,7 +36,8 @@ const StyledNav = styled.nav`
   a{
       color: white;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1.15rem;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   ul{
       display: flex;
@@ -50,7 +51,6 @@ const StyledNav = styled.nav`
   li{
       padding-left: 5rem;
       position: relative;
-
   }
 `
 
