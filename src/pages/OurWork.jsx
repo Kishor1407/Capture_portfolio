@@ -7,8 +7,12 @@ import goodtimes from "../img/goodtimes-small.png";
 //animation
 import { motion } from "framer-motion"; 
 import {pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from "../animation";
+import {useScroll} from "../components/useScroll";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element1, controls1] = useScroll();
+  
     return (
        <Work style={{background: "#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
         <motion.div variants={sliderContainer}>
@@ -26,16 +30,16 @@ const OurWork = () => {
                   </Hide>
                </Link>
            </Movie>
-           <Movie>
+           <Movie variants={fade} ref={element} animate={controls} initial="hidden">
                <h2>The Racer</h2>
-               <div className="line"></div>
+               <motion.div variants={lineAnim} className="line"></motion.div>
                <Link to="/work/the-racer">
                    <img src={theracer} alt="theracer" />
                </Link>
            </Movie>
-           <Movie>
+           <Movie variants={fade} ref={element1} animate={controls1} initial="hidden">
                <h2>Good Times</h2>
-               <div className="line"></div>
+               <motion.div variants={lineAnim} className="line"></motion.div>
                <Link to="/work/good-times">
                    <img src={goodtimes} alt="goodtimes" />
                </Link>
@@ -52,7 +56,7 @@ const Work = styled(motion.div)`
       padding: 1rem 0rem;
   }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line{
       height: 0.3rem;
