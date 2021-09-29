@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import {About} from "../styles"
+import {About} from "../styles";
+import Toggle from "./Toggle";
 
 const FaqSection = () => {
+ 
     return (
       <Faq>
           <h2>Any Question  <span>FAQ</span> </h2>
+          <Toggle>
           <div className="question">
               <h4>How do i start?</h4>
               <div className="answer">
@@ -14,7 +17,9 @@ const FaqSection = () => {
                   </p>
               </div>
               <div className="faq-line"></div>
-          </div>  
+          </div>
+          </Toggle>  
+          <Toggle>
           <div className="question">
               <h4>Daily Schedule</h4>
               <div className="answer">
@@ -24,6 +29,8 @@ const FaqSection = () => {
               </div>
               <div className="faq-line"></div>
           </div>
+          </Toggle>
+          <Toggle>
           <div className="question">
               <h4>Diffrent payment methods</h4>
               <div className="answer">
@@ -32,7 +39,9 @@ const FaqSection = () => {
                   </p>
               </div>
               <div className="faq-line"></div>
-          </div>   
+          </div>
+          </Toggle>
+          <Toggle>   
           <div className="question">
               <h4>What products do you offer</h4>
               <div className="answer">
@@ -42,6 +51,7 @@ const FaqSection = () => {
               </div>
               <div className="faq-line"></div>
           </div>
+          </Toggle>
       </Faq>
     )
 }
