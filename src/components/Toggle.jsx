@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import { motion } from "framer-motion";
-import styled from "styled-components";
 
 const Toggle = ({children, title}) => {
   const [toggle, setToggle] = useState(false);
@@ -12,7 +11,5 @@ const Toggle = ({children, title}) => {
      </motion.div>
     )
 }
-
-
 
 export default Toggle;
