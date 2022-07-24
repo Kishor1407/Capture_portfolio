@@ -3,7 +3,7 @@ import AboutUs from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/nav";
 import OurWork from "./pages/OurWork";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contactus";
 import MovieDetail from "./pages/MovieDetail";
 //Router
 import {Switch, Route, useLocation} from "react-router-dom"
