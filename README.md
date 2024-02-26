@@ -1,12 +1,16 @@
-# Getting Started with Create React App
 
-## Available Scripts
+# Business Portfolio Website Template
 
-In the project directory, you can run:
+View a live demo of the website-https://kishcaptureportfolio.netlify.app
 
-### `npm start`
+This project is a responsive business portfolio website template built using
+HTML, CSS, and React. It is designed to serve as a customizable portfolio for 
+various businesses, including photographers, designers, artists, and other
+professionals who want to showcase their work online.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-
+- Responsive design for optimal viewing on different devices.
+- Clean and modern user interface.
+- Easy-to-customize structure to adapt to different business needs.
+- Integration with React for dynamic content and interactivity.
